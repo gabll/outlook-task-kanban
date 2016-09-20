@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!-- docs: https://www.linkedin.com/pulse/you-can-create-kanban-view-your-outlook-tasks-part-2-anderson -->
+
+<html>
+<head>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<title>Unox Outlook Kanban</title>
+
+<!-- OUTLOOK OBJECTS FOR DATABINDING -->
+
+<OBJECT ID="CalList" CLASSID="CLSID:0468C085-CA5B-11D0-AF08-00609797F0E0">
+<PARAM NAME="Module" VALUE="Calendar"></OBJECT>
+
+<OBJECT ID="TaskList" CLASSID="CLSID:0468C085-CA5B-11D0-AF08-00609797F0E0">
+<PARAM NAME="Module" VALUE="Tasks"></OBJECT>
+
+<OBJECT ID="MailList" CLASSID="CLSID:0468C085-CA5B-11D0-AF08-00609797F0E0">
+<PARAM NAME="Module" VALUE="Inbox"></OBJECT>
+
+<script src="lib/jquery.min.js"></script>
+
+</HEAD>
+<BODY>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+
+			<!---->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-xs-3 bg-info">
+						<h2><i class="fa fa-archive"></i> Col1</h2>
+						<OBJECT classid=CLSID:0006F063-0000-0000-C000-000000000046
+			                id=ViewCtlFolder style="width:100%; height: 52em;">
+			            <param name="Namespace" value="MAPI">
+			            <param name="Folder" value="Attivit�">
+				    <!--<param name="View" value="By Category">
+				    <param name="Restriction" value=" [Categorie] <> 'Bureau' ">-->
+			            <param name="DeferUpdate" value="0">
+						</OBJECT>
+					</div>
+					<div class="col-md-3 col-xs-3 bg-warning">
+						<h2><i class="fa fa-stack-overflow"></i> Col2</h2>
+						<OBJECT classid=CLSID:0006F063-0000-0000-C000-000000000046
+			                id=ViewCtlFolder style="width:100%;height: 52em;">
+			            <param name="Namespace" value="MAPI">
+			            <param name="Folder" value="Attivit�\In_canna">
+				    <param name="DeferUpdate" value="0">
+						</OBJECT>
+					</div>
+					<div class="col-md-3 col-xs-3 bg-danger">
+						<h2><i class="fa fa-pencil-square-o"></i> Col3</h2>
+						<OBJECT classid=CLSID:0006F063-0000-0000-C000-000000000046
+			                id=ViewCtlFolder style="width:100%;height: 52em;">
+			            <param name="Namespace" value="MAPI">
+			            <param name="Folder" value="Attivit�\Daily_focus">
+				    <param name="DeferUpdate" value="0">
+						</OBJECT>
+					</div>
+					<div class="col-md-3 col-xs-3 bg-success">
+						<h2><i class="fa fa-check-circle"></i> Col4</h2>
+						<OBJECT classid=CLSID:0006F063-0000-0000-C000-000000000046
+			                id=ViewCtlFolder style="width:100%;height: 52em;">
+			            <param name="Namespace" value="MAPI">
+			            <param name="Folder" value="Attivit�\To_check">
+			            <param name="DeferUpdate" value="0">
+						</OBJECT>
+					</div>
+				</div>
+			</div>
+			<!---->
+
+		</div>
+
+		<!---<div class="col-md-1 col-xs-1">
+
+		</div>--->
+	</div>
+</div>
+
+</body>
+
+</html>
